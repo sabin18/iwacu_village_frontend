@@ -55,14 +55,14 @@ const LanguageDropdown = (props) => {
         (hover ? {
         color:"rgba(255, 255, 255, 0.6)",
         padding: "14px 15px",
-        marginTop: "6px",
-        borderRadius: "35px",
+        // marginTop: "6px",
+        // borderRadius: "35px",
         transition: "0.3s",
         fontSize: "14px",
         fontWeight: 500,
         fontFamily: "Roboto, sans-serif",
         textTransform: "uppercase",
-        backgroundColor:"#212180",
+        // backgroundColor:"#212180",
         letterSpacing: "0.3px",} : {
         color:"#efefef",
         padding: "14px 15px",

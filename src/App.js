@@ -63,6 +63,7 @@ const App = (props) => {
     <Route path="/" exact component={UserHome} />
     <Route path="/home" exact component={UserHome} />
     <Route path="/product/:id" exact component={UserHome} />
+    <Route path="/products" exact component={UserHome} />
     {/* <Route path="/posts/:topicId" component={Home} />
     <Route path="/menstruation-cycle" exact component={Home} />
     <ProtectedRoute exact path="/menstruation-cycle/regular" component={Home} />

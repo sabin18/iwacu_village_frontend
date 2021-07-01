@@ -22,20 +22,20 @@ return(
             <ul id="portfolio-flters">
               <li data-filter="*" className="filter-active">All</li>
                {categories.map((category,index)=>(
-              <li data-filter=".filter-app">{category.name}</li>
+              <li data-filter={category.name}>{category.name}</li>
               ))}
             </ul>
           </div>
         </div>
 
         <div className="row portfolio-container">
-
+        {categories.map((category,index)=>(
           <div className="col-lg-4 col-md-6 portfolio-item filter-app">
             <div className="portfolio-wrap">
-              <img src={productImages1} className="img-fluid" alt="" style={{height:'300px', width:"100%"}} />
+              <img src={category.image} className="img-fluid" alt="" style={{height:'300px', width:"100%"}} />
               <div className="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
+                <h4>{category.name}</h4>
+                <p>{category.name}</p>
               </div>
               <div className="portfolio-links">
                 <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" className="venobox" title="App 1"><i className="bx bx-plus"></i></a>
@@ -43,119 +43,7 @@ return(
               </div>
             </div>
           </div>
-
-          <div className="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div className="portfolio-wrap">
-              <img src={productImages2} className="img-fluid" alt="" style={{height:'300px', width:"100%"}} />
-              <div className="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-              </div>
-              <div className="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" className="venobox" title="Web 3"><i className="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i className="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div className="portfolio-wrap">
-              <img src={productImages3} className="img-fluid" alt="" style={{height:'300px', width:"100%"}} />
-              <div className="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
-              </div>
-              <div className="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" className="venobox" title="App 2"><i className="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i className="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div className="portfolio-wrap">
-              <img src={productImages} className="img-fluid" alt="" style={{height:'300px', width:"100%"}} />
-              <div className="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
-              </div>
-              <div className="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" className="venobox" title="Card 2"><i className="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i className="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div className="portfolio-wrap">
-              <img src={productImages4} className="img-fluid" alt="" style={{height:'300px', width:"100%"}} />
-              <div className="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
-              </div>
-              <div className="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" className="venobox" title="Web 2"><i className="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i className="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div className="portfolio-wrap">
-              <img src={productImages3} className="img-fluid" alt="" style={{height:'300px', width:"100%"}} />
-              <div className="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
-              </div>
-              <div className="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" className="venobox" title="App 3"><i className="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i className="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div className="portfolio-wrap">
-              <img src={productImages3} className="img-fluid" alt="" style={{height:'300px', width:"100%"}} />
-              <div className="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
-              </div>
-              <div className="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" className="venobox" title="Card 1"><i className="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i className="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div className="portfolio-wrap">
-              <img src={productImages4} className="img-fluid" alt="" style={{height:'300px', width:"100%"}} />
-              <div className="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
-              </div>
-              <div className="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" className="venobox" title="Card 3"><i className="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i className="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div className="portfolio-wrap">
-              <img src={productImages} className="img-fluid" alt="" style={{height:'300px', width:"100%"}} />
-              <div className="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-              </div>
-              <div className="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" className="venobox" title="Web 3"><i className="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i className="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
+          ))}
         </div>
 
       </div>

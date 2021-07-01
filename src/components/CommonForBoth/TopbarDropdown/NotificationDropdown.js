@@ -10,14 +10,14 @@ import avatar4 from '../../../assets/images/users/avatar-4.jpg';
 //i18n
 import { withNamespaces } from 'react-i18next';
 import { MESTRUAL_CYCLE_NOTIFICATIONS_QUERY } from '../../../querries/cycle';
-import { useQuery} from '@apollo/client';
+// import { useQuery} from '@apollo/client';
 
 const NotificationDropdown = (props) => {
   // Declare a new state variable, which we'll call "menu"
   const [menu, setMenu] = useState(false);
-  const { loading, error, data} = useQuery(MESTRUAL_CYCLE_NOTIFICATIONS_QUERY, {
-    fetchPolicy: 'no-cache',
-  });
+  // const { loading, error, data} = useQuery(MESTRUAL_CYCLE_NOTIFICATIONS_QUERY, {
+  //   fetchPolicy: 'no-cache',
+  // });
 
   return (
     <>
@@ -33,7 +33,7 @@ const NotificationDropdown = (props) => {
           id="page-header-notifications-dropdown"
         >
           <i className="bx bx-bell bx-tada"></i>
-          <span className="badge badge-danger badge-pill">{data?.menstrualCycleNotifications.length}</span>
+          {/* <span className="badge badge-danger badge-pill">{data?.menstrualCycleNotifications.length}</span> */}
         </DropdownToggle>
 
         <DropdownMenu className="dropdown-menu dropdown-menu-lg p-0" right>
@@ -51,7 +51,7 @@ const NotificationDropdown = (props) => {
             </Row>
           </div>
           <SimpleBar style={{ height: '230px' }}>
-          {data?.menstrualCycleNotifications.map((notification)=>(
+          {/* {data?.menstrualCycleNotifications.map((notification)=>(
             <Link to="" className="text-reset notification-item">
               <div className="media">
                 <div className="avatar-xs mr-3">
@@ -70,7 +70,7 @@ const NotificationDropdown = (props) => {
                 </div>
               </div>
             </Link>
-          ))}
+          ))} */}
           </SimpleBar>
           <div className="p-2 border-top">
             <Link className="btn btn-sm btn-link font-size-14 btn-block text-center" to="#">
