@@ -26,7 +26,7 @@ import ProfileMenu from '../CommonForBoth/TopbarDropdown/ProfileMenu';
 
 import megamenuImg from '../../assets/images/megamenu-img.png';
 import logo from '../../assets/images/logo-sm-light.png';
-import logoLight from '../../assets/images/logo-light.png';
+import logoLight from '../../assets/images/iwacu-logo.PNG';
 import logoLightSvg from '../../assets/images/logo-light.svg';
 import logoDark from '../../assets/images/logo-dark.png';
 
@@ -40,8 +40,8 @@ import slack from '../../assets/images/brands/slack.png';
 import './userHeader.scss'
 
 // //Import Images
-// import logodark from "../../assets/images/logo-dark.png"
-// import logolight from "../../assets/images/logo-light.png"
+import logodark from "../../assets/images/logo-dark.png"
+import logolight from "../../assets/images/logo-light.png"
 
 //i18n
 import { withNamespaces } from 'react-i18next';
@@ -140,21 +140,22 @@ const Header = (props) => {
       >
         {/* <Container> */}
           <NavbarBrand className="navbar-logo" href="/">
-            {props.imglight !== true ? (
+            {/* {props.imglight !== true ? (
               <img
                 src={logoDark}
                 alt=""
                 height="19"
                 className="logo logo-dark"
               />
-            ) : (
+            ) : ( */}
               <img
                 src={logoLight}
                 alt=""
-                height="19"
+                height="60"
+                width="100"
                 className="logo logo-light"
               />
-            )}
+            {/* )} */}
           </NavbarBrand>
 
           <NavbarToggler
@@ -178,7 +179,9 @@ const Header = (props) => {
                     // key={key}
                     className={"active"}
                   >
-                    <NavLink href={"/home"}> {props.t('Home')}</NavLink>
+                    <Link to={"/home"}>
+                    <NavLink> {props.t('Home')}</NavLink>
+                    </Link>
                   </NavItem>
                   <NavItem
                     // key={key}
@@ -227,7 +230,7 @@ const Header = (props) => {
                         <ul className="list-unstyled megamenu-list">
                         {/* {topicList.map((topic,index)=>( */}
                           <li key={index}>
-                            <Link to={`/posts/${category.id}`} onClick={() => setMenu(!menu)}><h5 className="font-size-14 mt-0">{category.name}</h5></Link>
+                            <Link to={`/products/${category.id}`} onClick={() => setMenu(!menu)}><h5 className="font-size-14 mt-0">{category.name}</h5></Link>
                           </li>
                           {/* ))} */}
                         </ul>
@@ -248,27 +251,28 @@ const Header = (props) => {
                     // key={key}
                     // className={item.navheading === "Home" ? "active" : ""}
                   >
-                    <NavLink href={`/locations-map`}>{props.t('Products')}</NavLink>
+                    <Link to={"/products"}>
+                    <NavLink>{props.t('Products')}</NavLink>
+                    </Link>
+                  </NavItem>
+                  <NavItem
+                    // key={key}
+                    // className={item.navheading === "Home" ? "active" : ""}
+                  >
+                    <NavLink>{props.t('Sellers')}</NavLink>
+                  </NavItem>
+                  <NavItem
+                    // key={key}
+                    // className={item.navheading === "Home" ? "active" : ""}
+                  >
+                    <NavLink>{props.t('Our Team')}</NavLink>
                     
                   </NavItem>
                   <NavItem
                     // key={key}
                     // className={item.navheading === "Home" ? "active" : ""}
                   >
-                    <NavLink href={`/view-quiz-topics`}>{props.t('Sellers')}</NavLink>
-                  </NavItem>
-                  <NavItem
-                    // key={key}
-                    // className={item.navheading === "Home" ? "active" : ""}
-                  >
-                    <NavLink href={`/menstruation-cycle`}>{props.t('Our Team')}</NavLink>
-                    
-                  </NavItem>
-                  <NavItem
-                    // key={key}
-                    // className={item.navheading === "Home" ? "active" : ""}
-                  >
-                    <NavLink href={`/community/chat`}>{props.t('About Us')}</NavLink>
+                    <NavLink>{props.t('About Us')}</NavLink>
                     
                   </NavItem>
                   <LanguageDropdown />

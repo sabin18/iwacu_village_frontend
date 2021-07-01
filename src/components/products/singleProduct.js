@@ -80,7 +80,7 @@ const ProductDetail = props => {
           <title>Product Detail | Skote - React Admin & Dashboard Template</title>
         </MetaTags> */}
         <Container fluid>
-          <Breadcrumbs title="Ecommerce" breadcrumbItem="Product Detail" />
+          <Breadcrumbs title="Product Detail" breadcrumbItem={product.name} />
           {!isEmpty(product) && (
             <Row>
               <Col>
@@ -102,11 +102,11 @@ const ProductDetail = props => {
                                     }}
                                   >
                                     <img
-                                      src={productImages}
+                                      src={product.image}
                                       alt=""
                                       onClick={() => {
                                         imageShow(
-                                          productImages,
+                                          product.image,
                                           1
                                         )
                                       }}
@@ -124,11 +124,11 @@ const ProductDetail = props => {
                                     }}
                                   >
                                     <img
-                                      src={productImages}
+                                      src={product.image}
                                       alt=""
                                       onClick={() => {
                                         imageShow(
-                                          productImages,
+                                          product.image,
                                           2
                                         )
                                       }}
@@ -146,11 +146,11 @@ const ProductDetail = props => {
                                     }}
                                   >
                                     <img
-                                      src={productImages}
+                                      src={product.image}
                                       alt=""
                                       onClick={() => {
                                         imageShow(
-                                          productImages,
+                                          product.image,
                                           3
                                         )
                                       }}
@@ -165,40 +165,44 @@ const ProductDetail = props => {
                                 <TabPane tabId="1">
                                   <div>
                                     <img
-                                      src={productImages}
+                                      src={product.image}
                                       alt=""
                                       id="expandedImg1"
                                       className="img-fluid mx-auto d-block"
+                                      style={{height:'300px', width:"100%"}} 
                                     />
                                   </div>
                                 </TabPane>
                                 <TabPane tabId="2">
                                   <div>
                                     <img
-                                      src={productImages}
+                                      src={product.image}
                                       id="expandedImg2"
                                       alt=""
                                       className="img-fluid mx-auto d-block"
+                                      style={{height:'300px', width:"100%"}} 
                                     />
                                   </div>
                                 </TabPane>
                                 <TabPane tabId="3">
                                   <div>
                                     <img
-                                      src={productImages}
+                                      src={product.image}
                                       id="expandedImg3"
                                       alt=""
                                       className="img-fluid mx-auto d-block"
+                                      style={{height:'300px', width:"100%"}} 
                                     />
                                   </div>
                                 </TabPane>
                                 <TabPane tabId="4">
                                   <div>
                                     <img
-                                      src={productImages}
+                                      src={product.image}
                                       id="expandedImg4"
                                       alt=""
                                       className="img-fluid mx-auto d-block"
+                                      style={{height:'300px', width:"100%"}} 
                                     />
                                   </div>
                                 </TabPane>
@@ -308,7 +312,7 @@ const ProductDetail = props => {
                                 <Link to="#" className="active" key={1}>
                                   <div className="product-color-item border rounded">
                                     <img
-                                      src={productImages2}
+                                      src={product.image}
                                       alt=""
                                       className="avatar-md"
                                     />
@@ -318,7 +322,7 @@ const ProductDetail = props => {
                                 <Link to="#" className="active" key={2}>
                                   <div className="product-color-item border rounded">
                                     <img
-                                      src={productImages3}
+                                      src={product.image}
                                       alt=""
                                       className="avatar-md"
                                     />
