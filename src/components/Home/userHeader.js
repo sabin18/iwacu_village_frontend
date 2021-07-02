@@ -230,7 +230,7 @@ const Header = (props) => {
                         <ul className="list-unstyled megamenu-list">
                         {/* {topicList.map((topic,index)=>( */}
                           <li key={index}>
-                            <Link to={`/products/${category.id}`} onClick={() => setMenu(!menu)}><h5 className="font-size-14 mt-0">{category.name}</h5></Link>
+                            <Link onClick={() => setMenu(!menu)}><h5 className="font-size-14 mt-0">{category.name}</h5></Link>
                           </li>
                           {/* ))} */}
                         </ul>
